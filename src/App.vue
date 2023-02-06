@@ -45,8 +45,41 @@
         </div>
       </div>
     </nav>
-
-
+    <div class="side  d-flex flex-column">
+      <div class="box d-flex flex-row">
+        <h3 class="text-center icon my-2"><i class="bi bi-house-door"></i></h3>
+        <h5 class="text my-auto">宣传公告</h5>
+      </div>
+      <div class="box d-flex flex-row">
+        <h3 class="text-center icon my-2"><i class="bi bi-person"></i></h3>
+        <h5 class="text my-auto">个人中心</h5>
+      </div>
+      <div class="box d-flex flex-row">
+        <h3 class="text-center icon my-2"><i class="bi bi-cash-coin"></i></h3>
+        <h5 class="text my-auto">我的积分</h5>
+      </div>
+      <div class="box d-flex flex-row">
+        <h3 class="text-center icon my-2"><i class="bi bi-coin"></i></h3>
+        <h5 class="text my-auto">我的代币</h5>
+      </div>
+      <div class="box d-flex flex-row">
+        <h3 class="text-center icon my-2"><i class="bi bi-gift"></i></h3>
+        <h5 class="text my-auto">礼物列表</h5>
+      </div>
+      <div class="box d-flex flex-row">
+        <h3 class="text-center icon my-2"><i class="bi bi-box-seam"></i></h3>
+        <h5 class="text my-auto">已定礼物</h5>
+      </div>
+      <div class="box d-flex flex-row">
+        <h3 class="text-center icon my-2"><i class="bi bi-truck"></i></h3>
+        <h5 class="text my-auto">已发货</h5>
+      </div>
+      <div class="box d-flex flex-row mt-auto">
+        <h3 class="text-center icon my-2"><i class="bi bi-indent"></i></h3>
+        <h5 class="text my-auto">退出登录</h5>
+      </div>
+    </div>
+    
   </div>
 </template>
 
@@ -61,9 +94,49 @@ export default {
 </script>
 
 <style>
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css");
 #app {
-  height: 10000px;
-  color: #eeeeee;
+  height: 100vh;
+  background-color: #eeeeee;
+}
+i{
+  color: #000000;
 }
 
+.side {
+  height: calc(100% - 56px);
+  width: 55px;
+  background-color: #ffffff;
+  left: 50px;
+  transition: all 0.2s;
+}
+.side>.box>.icon{
+  width: 55px;
+}
+.side>.box>.text{
+  width: 0px;
+  opacity:0;
+  transition: all 0.2s;
+}
+.side>.box>h5{
+  white-space: nowrap;
+  text-overflow : clip;
+}
+
+
+.side:hover {
+  width:220px
+}
+.side:hover>.box>.text:nth-child(n){
+  width: 165px;
+  opacity:1;
+}
+
+.side>.box:hover{
+  background-color: #e9f2f9;
+  color: #40a9ff;
+}
+.side>.box:hover>.icon>i:nth-child(n){
+  color: #40a9ff;
+}
 </style>
