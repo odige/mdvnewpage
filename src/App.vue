@@ -5,7 +5,7 @@
 
         <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar">
-          <span class="navbar-toggler-icon"></span>
+          <i class="bi bi-list"></i>
         </button>
         <a class="navbar-brand m-3" href="#">多维变奏MDV</a>
         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
@@ -47,36 +47,36 @@
     </nav>
     <div class="side  d-flex flex-column">
       <div class="box d-flex flex-row">
-        <h3 class="text-center icon my-2"><i class="bi bi-house-door"></i></h3>
-        <h5 class="text my-auto">宣传公告</h5>
+        <h4 class="text-center icon my-2"><i class="bi bi-house-door"></i></h4>
+        <p class="text my-auto">宣传公告</p>
       </div>
       <div class="box d-flex flex-row">
-        <h3 class="text-center icon my-2"><i class="bi bi-person"></i></h3>
-        <h5 class="text my-auto">个人中心</h5>
+        <h4 class="text-center icon my-2"><i class="bi bi-person"></i></h4>
+        <p class="text my-auto">个人中心</p>
       </div>
       <div class="box d-flex flex-row">
-        <h3 class="text-center icon my-2"><i class="bi bi-cash-coin"></i></h3>
-        <h5 class="text my-auto">我的积分</h5>
+        <h4 class="text-center icon my-2"><i class="bi bi-cash-coin"></i></h4>
+        <p class="text my-auto">我的积分</p>
       </div>
       <div class="box d-flex flex-row">
-        <h3 class="text-center icon my-2"><i class="bi bi-coin"></i></h3>
-        <h5 class="text my-auto">我的代币</h5>
+        <h4 class="text-center icon my-2"><i class="bi bi-coin"></i></h4>
+        <p class="text my-auto">我的代币</p>
       </div>
       <div class="box d-flex flex-row">
-        <h3 class="text-center icon my-2"><i class="bi bi-gift"></i></h3>
-        <h5 class="text my-auto">礼物列表</h5>
+        <h4 class="text-center icon my-2"><i class="bi bi-gift"></i></h4>
+        <p class="text my-auto">礼物列表</p>
       </div>
       <div class="box d-flex flex-row">
-        <h3 class="text-center icon my-2"><i class="bi bi-box-seam"></i></h3>
-        <h5 class="text my-auto">已定礼物</h5>
+        <h4 class="text-center icon my-2"><i class="bi bi-box-seam"></i></h4>
+        <p class="text my-auto">已定礼物</p>
       </div>
       <div class="box d-flex flex-row">
-        <h3 class="text-center icon my-2"><i class="bi bi-truck"></i></h3>
-        <h5 class="text my-auto">已发货</h5>
+        <h4 class="text-center icon my-2"><i class="bi bi-truck"></i></h4>
+        <p class="text my-auto">已发货</p>
       </div>
       <div class="box d-flex flex-row mt-auto">
-        <h3 class="text-center icon my-2"><i class="bi bi-indent"></i></h3>
-        <h5 class="text my-auto">退出登录</h5>
+        <h4 class="text-center icon my-2"><i class="bi bi-indent"></i></h4>
+        <p class="text my-auto">退出登录</p>
       </div>
     </div>
     
@@ -104,7 +104,7 @@ i{
 }
 
 .side {
-  height: calc(100% - 56px);
+  height: calc(100% - 46.5px);
   width: 55px;
   background-color: #ffffff;
   left: 50px;
@@ -118,7 +118,7 @@ i{
   opacity:0;
   transition: all 0.2s;
 }
-.side>.box>h5{
+.side>.box>p{
   white-space: nowrap;
   text-overflow : clip;
 }
