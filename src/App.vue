@@ -3,7 +3,7 @@
     <nav class="navbar navbar-dark bg-primary bg-body-tertiary sticky-top bg-primary-border-subtle">
       <div>
 
-        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        <button class="navbar-toggler mx-3 a" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar">
           <i class="bi bi-list"></i>
         </button>
@@ -45,46 +45,53 @@
         </div>
       </div>
     </nav>
-    <div class="side  d-flex flex-column">
-      <div class="box d-flex flex-row">
-        <h4 class="text-center icon my-2"><i class="bi bi-house-door"></i></h4>
-        <p class="text my-auto">宣传公告</p>
+
+    <div class="bottm d-flex flex-row">
+      <div class="side  d-flex flex-column">
+        <div class="box d-flex flex-row">
+          <h4 class="text-center icon my-2"><i class="bi bi-house-door"></i></h4>
+          <p class="text my-auto ps-3">宣传公告</p>
+        </div>
+        <div class="box d-flex flex-row">
+          <h4 class="text-center icon my-2"><i class="bi bi-person"></i></h4>
+          <p class="text my-auto ps-3">个人中心</p>
+        </div>
+        <div class="box d-flex flex-row">
+          <h4 class="text-center icon my-2"><i class="bi bi-cash-coin"></i></h4>
+          <p class="text my-auto ps-3">我的积分</p>
+        </div>
+        <div class="box d-flex flex-row">
+          <h4 class="text-center icon my-2"><i class="bi bi-coin"></i></h4>
+          <p class="text my-auto ps-3">我的代币</p>
+        </div>
+        <div class="box d-flex flex-row">
+          <h4 class="text-center icon my-2"><i class="bi bi-gift"></i></h4>
+          <p class="text my-auto ps-3">礼物列表</p>
+        </div>
+        <div class="box d-flex flex-row">
+          <h4 class="text-center icon my-2"><i class="bi bi-box-seam"></i></h4>
+          <p class="text my-auto ps-3">已定礼物</p>
+        </div>
+        <div class="box d-flex flex-row">
+          <h4 class="text-center icon my-2"><i class="bi bi-truck"></i></h4>
+          <p class="text my-auto ps-3">已发货</p>
+        </div>
+        <div class="box d-flex flex-row mt-auto ">
+          <h4 class="text-center icon my-3"><i class="bi bi-indent"></i></h4>
+          <p class="text my-auto ps-3">退出登录</p>
+        </div>
       </div>
-      <div class="box d-flex flex-row">
-        <h4 class="text-center icon my-2"><i class="bi bi-person"></i></h4>
-        <p class="text my-auto">个人中心</p>
-      </div>
-      <div class="box d-flex flex-row">
-        <h4 class="text-center icon my-2"><i class="bi bi-cash-coin"></i></h4>
-        <p class="text my-auto">我的积分</p>
-      </div>
-      <div class="box d-flex flex-row">
-        <h4 class="text-center icon my-2"><i class="bi bi-coin"></i></h4>
-        <p class="text my-auto">我的代币</p>
-      </div>
-      <div class="box d-flex flex-row">
-        <h4 class="text-center icon my-2"><i class="bi bi-gift"></i></h4>
-        <p class="text my-auto">礼物列表</p>
-      </div>
-      <div class="box d-flex flex-row">
-        <h4 class="text-center icon my-2"><i class="bi bi-box-seam"></i></h4>
-        <p class="text my-auto">已定礼物</p>
-      </div>
-      <div class="box d-flex flex-row">
-        <h4 class="text-center icon my-2"><i class="bi bi-truck"></i></h4>
-        <p class="text my-auto">已发货</p>
-      </div>
-      <div class="box d-flex flex-row mt-auto">
-        <h4 class="text-center icon my-2"><i class="bi bi-indent"></i></h4>
-        <p class="text my-auto">退出登录</p>
-      </div>
+      <router-view></router-view>
     </div>
     
+
+
+
   </div>
 </template>
 
 <script>
-
+// import { _push } from "@/scripts/page";
 export default {
   name: 'App',
   components: {
@@ -95,48 +102,48 @@ export default {
 
 <style>
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css");
+
 #app {
   height: 100vh;
   background-color: #eeeeee;
 }
-i{
+
+i {
   color: #000000;
 }
-
-.side {
+.bottm{ 
   height: calc(100% - 46.5px);
-  width: 55px;
+}
+.side {
+  height: 100%;
+  width: 220px;
   background-color: #ffffff;
   left: 50px;
   transition: all 0.2s;
 }
-.side>.box>.icon{
+
+.side>.box>.icon {
   width: 55px;
 }
-.side>.box>.text{
-  width: 0px;
-  opacity:0;
-  transition: all 0.2s;
-}
-.side>.box>p{
-  white-space: nowrap;
-  text-overflow : clip;
+
+.row {
+  background-color: #fff;
+  width: 100%;
+  --bs-gutter-x:0;
 }
 
-
-.side:hover {
-  width:220px
-}
-.side:hover>.box>.text:nth-child(n){
-  width: 165px;
-  opacity:1;
-}
-
-.side>.box:hover{
+.side>.box:hover {
   background-color: #e9f2f9;
   color: #40a9ff;
 }
-.side>.box:hover>.icon>i:nth-child(n){
+
+.side>.box:hover>.icon>i:nth-child(n) {
   color: #40a9ff;
 }
+
+.a {
+  border: none;
+}
+
+
 </style>
