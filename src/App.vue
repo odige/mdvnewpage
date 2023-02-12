@@ -3,7 +3,7 @@
     <nav class="navbar navbar-dark bg-primary bg-body-tertiary sticky-top bg-primary-border-subtle">
       <div>
 
-        <button class="navbar-toggler mx-3 a" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
           aria-controls="offcanvasNavbar">
           <i class="bi bi-list"></i>
         </button>
@@ -48,9 +48,9 @@
 
     <div class="bottm d-flex flex-row">
       <div class="side  d-flex flex-column">
-        <div class="box d-flex flex-row" v-for="view in views" :key="view.name" @click="to_(view.id)">
+        <div class="box d-flex flex-row position-relative" v-for="view in views" :key="view.name" @click="to_(view.id)">
           <h4 class="text-center icon my-2"><i :class=view.i></i></h4>
-          <p class="text my-auto ps-3">{{view.name}}</p>
+          <p class="text my-auto ps-3 stretched-link click">{{view.name}}</p>
         </div>
         <div class="box d-flex flex-row mt-auto ">
           <h4 class="text-center icon my-3"><i class="bi bi-indent"></i></h4>
@@ -84,7 +84,7 @@ export default {
   methods:{
     to_(id){
       if(id==='propaganda'){
-        _push(window,"/")
+        _push(window,"")
       }else{
         _push(window,id)
       }
@@ -108,7 +108,9 @@ i {
 .bottm {
   height: calc(100% - 46.5px);
 }
-
+.click{
+  cursor:pointer;
+}
 .side {
   height: 100%;
   width: 220px;
@@ -124,7 +126,6 @@ i {
 .row {
   background-color: #fff;
   width: 100%;
-  --bs-gutter-x: 0;
 }
 
 .side>.box:hover {
@@ -136,7 +137,5 @@ i {
   color: #40a9ff;
 }
 
-.a {
-  border: none;
-}
+
 </style>
