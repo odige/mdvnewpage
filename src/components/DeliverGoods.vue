@@ -1,15 +1,15 @@
 <template>
-  <div class="row ms-4">
+    <div class="row ms-4">
 
-  </div>
+    </div>
 </template>
 
 <script>
 export default {
-  name: 'PropaGanda',
-  props: {
-    msg: String
-  }
+    name: 'DeliverGoods',
+    props: {
+        msg: String
+    }
 }
 </script>
 
