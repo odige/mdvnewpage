@@ -6,10 +6,10 @@ import { createRouter, createWebHashHistory } from "vue-router";
 
 
 // 在此添加路由页面
-import hello from "@/components/HelloWorld.vue";
+import home from "@/components/PropaGanda.vue";
 
 // 在此添加路由
-const routes = [{ path: "/", component: hello }];
+const routes = [{ path: "/", component: home }];
 
 const router = createRouter({
   history: createWebHashHistory(),
