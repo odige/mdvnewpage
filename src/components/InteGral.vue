@@ -1,6 +1,6 @@
 <template>
     <div class="row ms-4">
-
+        积分
     </div>
 </template>
 

@@ -48,33 +48,9 @@
 
     <div class="bottm d-flex flex-row">
       <div class="side  d-flex flex-column">
-        <div class="box d-flex flex-row">
-          <h4 class="text-center icon my-2"><i class="bi bi-house-door"></i></h4>
-          <p class="text my-auto ps-3">宣传公告</p>
-        </div>
-        <div class="box d-flex flex-row">
-          <h4 class="text-center icon my-2"><i class="bi bi-person"></i></h4>
-          <p class="text my-auto ps-3">个人中心</p>
-        </div>
-        <div class="box d-flex flex-row">
-          <h4 class="text-center icon my-2"><i class="bi bi-cash-coin"></i></h4>
-          <p class="text my-auto ps-3">我的积分</p>
-        </div>
-        <div class="box d-flex flex-row">
-          <h4 class="text-center icon my-2"><i class="bi bi-coin"></i></h4>
-          <p class="text my-auto ps-3">我的代币</p>
-        </div>
-        <div class="box d-flex flex-row">
-          <h4 class="text-center icon my-2"><i class="bi bi-gift"></i></h4>
-          <p class="text my-auto ps-3">礼物列表</p>
-        </div>
-        <div class="box d-flex flex-row">
-          <h4 class="text-center icon my-2"><i class="bi bi-box-seam"></i></h4>
-          <p class="text my-auto ps-3">已定礼物</p>
-        </div>
-        <div class="box d-flex flex-row">
-          <h4 class="text-center icon my-2"><i class="bi bi-truck"></i></h4>
-          <p class="text my-auto ps-3">已发货</p>
+        <div class="box d-flex flex-row" v-for="view in views" :key="view.name" @click="to_(view.id)">
+          <h4 class="text-center icon my-2"><i :class=view.i></i></h4>
+          <p class="text my-auto ps-3">{{view.name}}</p>
         </div>
         <div class="box d-flex flex-row mt-auto ">
           <h4 class="text-center icon my-3"><i class="bi bi-indent"></i></h4>
@@ -83,7 +59,7 @@
       </div>
       <router-view></router-view>
     </div>
-    
+
 
 
 
@@ -91,11 +67,28 @@
 </template>
 
 <script>
-// import { _push } from "@/scripts/page";
+import { _push } from "@/scripts/page";
 export default {
   name: 'App',
-  components: {
-
+  data() {
+    return {
+      views: [{ i: "bi bi-house-door", name: "宣传公告",id:"propaganda"},
+      { i: "bi bi-person", name: "个人中心" ,id:"personal"},
+      { i: "bi bi-cash-coin", name: "我的积分",id:"inregral" },
+      { i: "bi bi-coin", name: "我的代币",id:"coin" },
+      { i: "bi bi-gift", name: "礼物列表" ,id:"gift"},
+      { i: "bi bi-box-seam", name: "已定礼物",id:"order" },
+      { i: "bi bi-truck", name: "已发货",id:"delivergoods" }],
+    }
+  },
+  methods:{
+    to_(id){
+      if(id==='propaganda'){
+        _push(window,"/")
+      }else{
+        _push(window,id)
+      }
+    }
   }
 }
 </script>
@@ -111,9 +104,11 @@ export default {
 i {
   color: #000000;
 }
-.bottm{ 
+
+.bottm {
   height: calc(100% - 46.5px);
 }
+
 .side {
   height: 100%;
   width: 220px;
@@ -129,7 +124,7 @@ i {
 .row {
   background-color: #fff;
   width: 100%;
-  --bs-gutter-x:0;
+  --bs-gutter-x: 0;
 }
 
 .side>.box:hover {
@@ -144,6 +139,4 @@ i {
 .a {
   border: none;
 }
-
-
 </style>

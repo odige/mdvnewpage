@@ -1,6 +1,6 @@
 <template>
     <div class="row ms-4">
-
+        代币
     </div>
 </template>
 
